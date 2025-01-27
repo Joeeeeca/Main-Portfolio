@@ -1,1 +1,196 @@
-ECHO is on.
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background:linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+}
+
+p,
+h2,
+h3 {
+    color:#636363;
+    font-weight:300;
+}
+
+/* Wrapper */
+#wrapper {
+    width: 1450px; /* Explicit width */
+    max-width: calc(100% - 4em); /* Responsive constraint */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Ensure contained elements respect this boundary */
+  }
+  
+  /* Navbar */
+  #navbar-wrapper {
+    position: fixed;
+    top: 0;
+    width: inherit; /* Match width of parent (#wrapper) */
+    left: 50%; /* Center within the viewport */
+    transform: translateX(-50%); /* Adjust centering due to fixed position */
+    background: rgba(247, 247, 247, 0.95);
+    z-index: 1030;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    width: 100%; /* Ensure it spans the full width of #navbar-wrapper */
+    background-color: rgba(247, 247, 247, 0.95);
+  }
+  
+  .navbar-nav {
+    background: transparent;
+  }
+  
+  .nav-link {
+    color: #636363;
+    padding: 5px 25px !important;
+  }
+  
+  .nav-link.active {
+    background-color: #ffffff;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .navbar ul li a:hover {
+    background-color: rgba(222, 222, 222, 0.25);
+    border-radius:10px;
+}
+
+.main-container {
+    font-family: "Source Sans 3", serif;
+    min-height:100vh;
+}
+
+#intro,
+
+#about {
+ padding: 5em;
+ margin:0 auto;
+}
+
+#projects {
+    padding:5em 2em;
+    margin:0 auto;
+}
+.main-heading {
+    margin-bottom:31px;
+}
+
+.main-heading::after {
+    content:"";
+    display:block;
+    width:20%;
+    height:2px;
+    margin: 0.7em 0 1em 0;
+    background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+
+}
+
+.main-text {
+    margin-bottom:31px;
+}
+
+.main-text,
+ol {
+    font-size:22px;
+}
+
+
+.intro-btn,
+.about-btn {
+    box-shadow:  0 0 0 1px #dddddd;
+    background:transparent;
+    font-size:22px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button.intro-btn:hover,
+.about-btn:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+
+}
+
+
+
+.personal-pic-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20em; /* Border size */
+    height: 20em; /* Border size */
+    border-radius: 50%; /* Makes the border circular */
+    border: 4px solid #6c757d; /* Adjust border color and thickness */
+    background-color: transparent;
+}
+
+.personal-pic {
+    width: 20em; /* Slightly smaller than the border to fit perfectly inside */
+    height: 20em; /* Ensure the image is also circular */
+    border-radius: 50%; /* Ensures the image is circular */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio without distortion */
+}
+
+
+
+.second-heading::after {
+    content:"";
+    display:block;
+    width:10%;
+    height:2px;
+    margin: 0.7em auto 1em auto;
+    background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+}
+
+.guitar-image,
+.sports-image,
+.health-image {
+    box-shadow:  0 0 0 1px #dddddd;
+}
+
+.third-heading::after {
+    content:"";
+    display:block;
+    width:10%;
+    height:2px;
+    margin: 0.7em auto 1em auto;
+    background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+}
+
+footer {
+    padding:5em 3em 3em 3em;
+}
+
+.card-body {
+    background:transparent;
+}
+
+.card-body a {
+    text-decoration: none;
+}
+
+.card {
+    background:transparent;
+    border:none;
+    color:#fff;
+}
+
+.card-text {
+    color:#fff;
+}
+
+
+.footer-btn {
+    color:#fff;
+    box-shadow:  0 0 0 1px #dddddd;
+    background:transparent;
+    font-size:18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer-btn:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
