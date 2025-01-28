@@ -109,6 +109,12 @@ padding:5em;
     }
 }
 
+@media screen and (max-width: 768px) {
+    #projects {
+padding:5em 2em;
+    }
+}
+
 
 .main-heading {
     margin-bottom: 31px;
@@ -279,6 +285,7 @@ footer .card.transparent-card {
     background:transparent;
     border:none;
     color:#fff;
+    --bs-card-spacer-y:0;
 }
 
 .card-text {
