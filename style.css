@@ -264,6 +264,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 576px) {
+    footer {
+    padding:5em 1em;
+    }
+}
+
 .transparent-card {
   background-color: transparent !important; /* Removes the white background */
   box-shadow: none; /* Removes the default card shadow */
@@ -281,11 +287,14 @@ footer .card.transparent-card {
     text-decoration: none;
 }
 
-.card {
+.card,
+.card-body {
     background:transparent;
     border:none;
     color:#fff;
-    --bs-card-spacer-y:0;
+    --bs-card-spacer-y: 0 !important; /* Remove vertical spacing */
+    padding-top: 0 !important;  /* Remove padding at the top */
+    padding-bottom: 0 !important;  /* Remove padding at the bottom */
 }
 
 .card-text {
