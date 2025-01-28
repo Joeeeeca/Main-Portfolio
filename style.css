@@ -66,10 +66,16 @@ h3 {
 }
 
 #intro,
-
 #about {
  padding: 5em;
  margin:0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    #intro,
+    #about {
+padding:5em 3em;
+    }
 }
 
 #projects {
@@ -77,17 +83,28 @@ h3 {
     margin:0 auto;
 }
 .main-heading {
-    margin-bottom:31px;
+    margin-bottom: 31px;
+    text-align: center;  /* Centers the heading */
 }
 
 .main-heading::after {
-    content:"";
-    display:block;
-    width:20%;
-    height:2px;
-    margin: 0.7em 0 1em 0;
+    content: "";
+    display: block;
+    width: 40%; /* Adjust width for smaller screens */
+    height: 2px;
+    margin: 0.7em auto 1em; /* Auto margins for centering */
     background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+}
 
+/* For larger screens, adjust the width and margins of the pseudo-element */
+@media (min-width: 992px) {
+    .main-heading {
+        text-align: left; /* Left align on larger screens */
+    }
+
+    .main-heading::after {
+        width: 20%; /* Keep the original width on large screens */
+    }
 }
 
 .main-text {
@@ -97,6 +114,15 @@ h3 {
 .main-text,
 ol {
     font-size:22px;
+}
+
+@media screen and (max-width: 992px) {
+ol li {
+    display: inline-block; /* Makes each list item behave like an inline element */
+    text-align: center; /* Ensures the text aligns left inside the li */
+    width: 100%; /* Takes up full width of the container */
+
+}
 }
 
 
@@ -134,6 +160,30 @@ button.intro-btn:hover,
     object-fit: cover; /* Ensures the image maintains its aspect ratio without distortion */
 }
 
+@media screen and (max-width: 1200px) {
+    .personal-pic-border {
+        width: 15em;
+        height: 15em;
+    }
+
+    .personal-pic {
+        width: 15em;
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .personal-pic-border {
+        width: 12em;
+        height: 12em;
+    }
+
+    .personal-pic {
+        width: 12em;
+        height: 12em;
+    }
+}
+
 
 .second-heading::after {
     content:"";
@@ -148,8 +198,11 @@ button.intro-btn:hover,
     transition: transform 0.3s ease-in-out;
 }
 
-.projects-card:hover {
-    transform: scale(1.1);
+
+@media screen and (min-width: 1200px) {
+    .projects-card:hover {
+        transform: scale(1.1);
+    }
 }
 
 .guitar-image,
