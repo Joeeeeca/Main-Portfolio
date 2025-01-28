@@ -22,6 +22,19 @@ h3 {
     position: relative; /* Ensure contained elements respect this boundary */
   }
   
+
+  @media screen and (max-width:992px) {
+    #wrapper {
+        width:100%;
+        max-width:95%;
+    }
+  }
+  @media screen and (max-width:768px) {
+    #wrapper {
+        width:100%;
+        max-width:100%;
+    }
+  }
   /* Navbar */
   #navbar-wrapper {
     position: fixed;
@@ -78,10 +91,25 @@ padding:5em 3em;
     }
 }
 
+@media screen and (max-width: 768px) {
+    #intro,
+    #about {
+padding:5em 1em;
+    }
+}
+
 #projects {
     padding:5em 2em;
     margin:0 auto;
 }
+
+@media screen and (max-width: 1200px) {
+    #projects {
+padding:5em;
+    }
+}
+
+
 .main-heading {
     margin-bottom: 31px;
     text-align: center;  /* Centers the heading */
@@ -222,6 +250,12 @@ button.intro-btn:hover,
 
 footer {
     padding:5em 3em 3em 3em;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+    padding:5em 3em;
+    }
 }
 
 .transparent-card {
