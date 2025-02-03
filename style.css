@@ -230,6 +230,24 @@ button.intro-btn:hover,
 
 .projects-card {
     transition: transform 0.3s ease-in-out;
+    background-color: #f5f5f5;
+}
+
+.guitar-website {
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.05), /* Left */
+    0px -4px 8px rgba(0, 0, 0, 0.05), /* Top */
+    0px 4px 8px rgba(0, 0, 0, 0.05); /* Bottom */
+}
+
+.sports-website {
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.05), /* Top */
+    0px 4px 8px rgba(0, 0, 0, 0.05); /* Bottom */
+}
+
+.health-website {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05), /* Right */
+    0px -4px 8px rgba(0, 0, 0, 0.05), /* Top */
+    0px 4px 8px rgba(0, 0, 0, 0.05); /* Bottom */
 }
 
 
@@ -238,6 +256,8 @@ button.intro-btn:hover,
         transform: scale(1.1);
     }
 }
+
+
 
 .guitar-image,
 .sports-image,
@@ -299,6 +319,24 @@ footer .card.transparent-card {
 
 .card-text {
     color:#fff;
+}
+
+.contact-links::after {
+    content:"";
+    width:0%;
+    height:2px;
+    background:black;
+    display:block;
+    margin:5px auto 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.email-contact:hover::after {
+    width:40%;
+}
+
+.whatsapp-contact:hover::after {
+    width:80%;
 }
 
 
