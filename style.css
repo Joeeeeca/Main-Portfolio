@@ -78,7 +78,10 @@ h3 {
     min-height:100vh;
 }
 
-#intro,
+#intro {
+    padding: 8em 5em 5em 5em;
+}
+
 #about {
  padding: 5em;
  margin:0 auto;
@@ -259,11 +262,7 @@ button.intro-btn:hover,
 
 
 
-.guitar-image,
-.sports-image,
-.health-image {
-    box-shadow:  0 0 0 1px #dddddd;
-}
+
 
 .third-heading::after {
     content:"";
