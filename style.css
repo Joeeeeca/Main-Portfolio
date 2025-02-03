@@ -101,6 +101,13 @@ padding:5em 1em;
     }
 }
 
+@media screen and (max-width: 425px) {
+    #intro,
+    #about {
+padding:5em 0em;
+    }
+}
+
 #projects {
     padding:5em 2em;
     margin:0 auto;
@@ -129,7 +136,7 @@ padding:5em 2em;
     display: block;
     width: 40%; /* Adjust width for smaller screens */
     height: 2px;
-    margin: 0.7em auto 1em; /* Auto margins for centering */
+    margin: 0.2em auto 1em;
     background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
 
@@ -141,6 +148,13 @@ padding:5em 2em;
 
     .main-heading::after {
         width: 20%; /* Keep the original width on large screens */
+        margin: 0.7em 0em; /* Auto margins for centering */
+    }
+}
+
+@media (max-width: 428px) {
+    .main-heading {
+        font-size: 20px !important;
     }
 }
 
@@ -153,12 +167,16 @@ ol {
     font-size:22px;
 }
 
+#intro ol {
+    padding-left:1rem;
+}
+
 @media screen and (max-width: 992px) {
 ol li {
     display: inline-block; /* Makes each list item behave like an inline element */
     text-align: center; /* Ensures the text aligns left inside the li */
     width: 100%; /* Takes up full width of the container */
-
+padding-left:0rem;
 }
 }
 
@@ -227,7 +245,7 @@ button.intro-btn:hover,
     display:block;
     width:10%;
     height:2px;
-    margin: 0.7em auto 1em auto;
+    margin: 0.2em auto 1em auto;
     background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
 
@@ -253,10 +271,16 @@ button.intro-btn:hover,
     0px 4px 8px rgba(0, 0, 0, 0.05); /* Bottom */
 }
 
+@media screen and (min-width:1200px) {
+.custom-col {
+    flex: 0 0 31% !important; /* Adjust width as needed */
+    max-width: 31% !important;
+  }
+}
 
 @media screen and (min-width: 1200px) {
     .projects-card:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
