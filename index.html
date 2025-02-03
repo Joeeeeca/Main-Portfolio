@@ -143,35 +143,27 @@
     </footer>
     <script>
 // Function to update the active link based on scroll position
+// Function to update the active link based on scroll position
 function updateActiveLink() {
   let currentSectionId = '';
 
-  // Log the current scroll position
-  console.log('Scroll position:', window.scrollY);
-
-  // Loop through all sections and find the one in view
-  document.querySelectorAll('section').forEach(section => {
-    const sectionTop = section.offsetTop - 150; // Adjust for offset
+  // Get all section divs
+  document.querySelectorAll('#intro, #projects, #about').forEach(section => {
+    const sectionTop = section.offsetTop - 100; // Adjust for fixed navbar
     const sectionBottom = sectionTop + section.offsetHeight;
 
-    console.log(`Checking section: ${section.id}, sectionTop: ${sectionTop}, sectionBottom: ${sectionBottom}`);
-
-    // Check if scroll position is within section's bounds
     if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
       currentSectionId = section.id;
     }
   });
 
-  // Log which section is active
-  console.log('Active section id:', currentSectionId);
-
   // If a section is in view, update active link
   if (currentSectionId) {
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+
     const activeLink = document.querySelector(`a[href="#${currentSectionId}"]`);
     if (activeLink) {
-      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
       activeLink.classList.add('active');
-      console.log('Active link set:', activeLink);
     }
   }
 }
@@ -180,37 +172,28 @@ function updateActiveLink() {
 function handleNavClick(event) {
   event.preventDefault();
 
-  // Get the target section from the clicked link
   const targetId = event.target.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetId);
 
-  // Log the clicked link and target section
-  console.log('Clicked link:', event.target);
-  console.log('Target section:', targetSection);
-
-  // Add active class to the clicked link immediately
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-  });
+  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
   event.target.classList.add('active');
 
-  // Smooth scroll to the target section
-  targetSection.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+  // Smooth scroll to the target section with slight offset
+  window.scrollTo({
+    top: targetSection.offsetTop - 80, // Offset for fixed navbar
+    behavior: 'smooth'
   });
 }
 
-// Add event listener for scroll event to update active link
+// Attach scroll and click event listeners
 window.addEventListener('scroll', updateActiveLink);
-
-// Add event listeners for nav link clicks
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', handleNavClick);
 });
 
-// Initialize by updating the active class when the page loads
+// Set the correct active link on page load
 updateActiveLink();
+
 
 
 
