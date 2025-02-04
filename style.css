@@ -7,6 +7,46 @@ body {
     background:linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 }
 
+/* Default font sizes */
+h2 { font-size: 40px !important; }
+h3 { font-size: 28px !important; }
+h5 { font-size: 24px !important; }
+p, li { font-size: 22px !important; }
+button { font-size: 22px !important; }
+
+/* Medium Screens (Bootstrap md, < 992px) */
+@media (max-width: 991px) {
+  h2 { font-size: 36px !important; }
+  h3 { font-size: 24px !important; }
+  h5 { font-size: 22px !important; }
+  p, li { font-size: 20px !important; }
+  button { font-size: 20px !important; }
+}
+
+/* Small Screens (Bootstrap sm, < 768px) */
+@media (max-width: 767px) {
+  h2 { font-size: 32px !important; }
+  h3 { font-size: 22px !important; }
+  h5 { font-size: 20px !important; }
+  p, li { font-size: 18px !important; }
+  button { font-size: 18px !important; }
+}
+
+/*mobile screens (Bootstrap xs, < 576px) */
+@media (max-width: 576px) {
+    h2 { font-size: 22px !important; }
+    h3 { font-size: 20px !important; }
+}
+
+/* 4K Monitors (≥2560px) */
+@media (min-width: 2560px) {
+  h2 { font-size: 48px !important; }
+  h3 { font-size: 32px !important; }
+  h5 { font-size: 28px !important; }
+  p, li { font-size: 24px !important; }
+  button { font-size: 24px !important; }
+}
+
 p,
 h2,
 h3 {
@@ -101,12 +141,6 @@ padding:5em 1em;
     }
 }
 
-@media screen and (max-width: 425px) {
-    #intro,
-    #about {
-padding:5em 0em;
-    }
-}
 
 #projects {
     padding:5em 2em;
@@ -152,20 +186,10 @@ padding:5em 2em;
     }
 }
 
-@media (max-width: 428px) {
-    .main-heading {
-        font-size: 20px !important;
-    }
-}
-
 .main-text {
-    margin-bottom:31px;
+    margin-bottom:30px;
 }
 
-.main-text,
-ol {
-    font-size:22px;
-}
 
 #intro ol {
     padding-left:1rem;
@@ -185,7 +209,6 @@ padding-left:0rem;
 .about-btn {
     box-shadow:  0 0 0 1px #dddddd;
     background:transparent;
-    font-size:22px;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -367,7 +390,6 @@ footer .card.transparent-card {
     color:#fff;
     box-shadow:  0 0 0 1px #dddddd;
     background:transparent;
-    font-size:18px;
     transition: background-color 0.3s ease-in-out;
 }
 
